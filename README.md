@@ -8,11 +8,11 @@ Las modificaciones se aplican a:
 -  Lore
 -  Comentarios de las cartas
 
-Repositorio: `https://github.com/Desvelao/ahnr`
+Repositorio: `https://github.com/Desvelao/artifact-hero-names-replacer`
 
 __**IMPORTANTE**__: lee atentamente el contenido de este archivo. Asegúrate de haber realizado una **copia de seguridad** de las carpetas que se mencionan en el proceso de **Aplicación del parche** antes de ejecutar el programa.
 
-Descarga el programa ejecutable desde [aquí](https://github.com/Desvelao/ahnr/releases).
+Descarga el programa ejecutable desde [aquí](https://github.com/Desvelao/artifact-hero-names-replacer/releases).
 
 Creado por [Desvelao^^](https://desvelao.github.io/profile/).
 Donaciones: a través de [Ko-fi](https://www.ko-fi.com/desvelao) o [Patreon](https://www.patreon.com/desvelao).
@@ -27,7 +27,9 @@ Donaciones: a través de [Ko-fi](https://www.ko-fi.com/desvelao) o [Patreon](htt
 
 ***Nota:*** *la carpeta de `Steam` suele estar en `Archivos de programa (x86)` para Windows.*
 
-1. Descomprime el contenido del archivo .rar para que quede como se muestra dentro de la carpeta del juego ubicada en `Steam/SteamApps/common/Artifact`. ![Instalation](img/instalation.jpg)
+1. Descomprime el contenido del archivo .rar para que quede como se muestra dentro de la carpeta del juego ubicada en `Steam/SteamApps/common/Artifact`.
+
+    ![Instalation](img/instalation.jpg)
 
 2. Configuración del parche: `ahnr_config.txt`
     - **replace_from**: idioma base al que se modificarán los archivos. Es el mismo que se selecciona para el juego. Ej: Si juegas en Español entonces será `spanish`.

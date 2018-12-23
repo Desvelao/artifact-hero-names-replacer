@@ -11,7 +11,7 @@ APIURL = 'https://playartifact.com/cardset/'
 CDNURL = 'https://steamcdn-a.akamaihd.net'
 AUTHOR = 'Desvelao^^'
 VERSION = '0.0.1'
-REPOSITORY_URL = 'https://github.com/Desvelao/ahnr'
+REPOSITORY_URL = 'https://github.com/Desvelao/artifact-hero-names-replacer'
 
 def load_config():
     parser = configparser.ConfigParser()

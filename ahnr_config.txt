@@ -1,0 +1,8 @@
+[DEFAULT]
+replace_from = spanish
+replace_to = english
+sets = 00,01
+files = game/dcg/resource/dcg_common_<LANG>.txt,game/dcg/panorama/localization/dcg_<LANG>.txt,game/dcg/panorama/localization/dcg_glossary_<LANG>.txt
+files_sets = game/dcg/resource/card_set_<SETID>_<LANG>.txt,game/dcg/panorama/localization/dcg_lore_set_<SETID>_<LANG>.txt,game/dcg/panorama/localization/dcg_vo_set_<SETID>_<LANG>.txt
+
+;Documentation https://github.com/Desvelao/ahnr

@@ -1,0 +1,2 @@
+pipreqs==0.4.9
+aiohttp==2.2.5

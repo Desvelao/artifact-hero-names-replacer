@@ -65,8 +65,9 @@ def replace(text, data):
     new_text = text
     count = 0
     for d in data:
-        count += text.count(d['from'])
-        new_text = new_text.replace(d['from'],d['to'])
+        if(d['from'] != d['to']):
+            count += text.count(d['from'])
+            new_text = new_text.replace(d['from'],d['to'])
     return new_text, count
 
 def replace_file(file_path, heroes):
@@ -75,7 +76,7 @@ def replace_file(file_path, heroes):
         if (text.endswith('//PATCHED')):
             print("   " + u"\u274C" + f" It is patched: {file_path}")
             return 0
-        
+
         text_modified, count = replace(text,heroes)
         
         if (text_modified == text):

@@ -1,54 +1,58 @@
+# Other languages guide:
+- [Spanish](guides/spanish/README.md)
+
 # Artifact Hero Names Replacer (AHNR)
-Reemplaza los nombres de los héroes de un idioma a otro usando la API de Artifact. El objetivo de este programa es sustituir dichos nombres de un idioma a su versión original (inglesa) para igualarlo a los nombres de Dota 2.
+Replace Artifact card hero names from a language to other using Artifact API.
 
-Por ejemplo, si se reemplaza de `spanish` a `english`, se conseguirá que **Ax** pase a ser **Axe**
+For example, if you replace from `spanish` a `english`, you will get **Ax** pass to be **Axe**
 
-Las modificaciones se aplican a:
--  Cartas
+Modifications apply to:
+-  Cards
 -  Lore
--  Comentarios de las cartas
+-  Cards comments
 
-Repositorio: `https://github.com/Desvelao/artifact-hero-names-replacer`
+Repository: `https://github.com/Desvelao/artifact-hero-names-replacer`
 
-__**IMPORTANTE**__: lee atentamente el contenido de este archivo. Asegúrate de haber realizado una **copia de seguridad** de las carpetas que se mencionan en el proceso de **Aplicación del parche** antes de ejecutar el programa.
+__**IMPORTANT**__: read with attention the content of this file. Be sure to have done a **backup** of folder mentioned in the process **Path application** before execute the program.
 
-Descarga el programa ejecutable desde [aquí](https://github.com/Desvelao/artifact-hero-names-replacer/releases).
+Download the program from [here](https://github.com/Desvelao/artifact-hero-names-replacer/releases).
 
-Creado por [Desvelao^^](https://desvelao.github.io/profile/).
-Donaciones: a través de [Ko-fi](https://www.ko-fi.com/desvelao) o [Patreon](https://www.patreon.com/desvelao).
+Created by [Desvelao^^](https://desvelao.github.io/profile/).
+Donations: [Ko-fi](https://www.ko-fi.com/desvelao) or [Patreon](https://www.patreon.com/desvelao).
 
-# Aplicación del parche
 
-❗ *Es necesario internet para acceder a la API de Artifact*
+# Patch application
 
-0. __**IMPORTANTE:**__ Se recomienda realizar una **copia de seguridad** (fuera de la carpeta del juego) por si se necesitara reestablecer los archivos originales (o mira el apartado de **Restauración**), de las siguientes carpetas:
+❗ *Internet is required to access to Artifact API*
+
+0. __**IMPORTANT:**__ It is recommended to do a **backup** (outside game folder) to reset the original files if is needed (or see **Restauration**), of next folders:
     - `Steam/SteamApps/common/Artifact/game/dcg/panorama/localization`
     - `Steam/SteamApps/common/Artifact/game/dcg/resource`
 
-***Nota:*** *la carpeta de `Steam` suele estar en `Archivos de programa (x86)` para Windows.*
+***Note:*** *`Steam` folder is usually at `Program Files(x86)` on Windows.*
 
-1. Descomprime el contenido del archivo .rar para que quede como se muestra dentro de la carpeta del juego ubicada en `Steam/SteamApps/common/Artifact`.
+1. Unzip the .rar file at `Steam/SteamApps/common/Artifact`.
 
     ![Instalation](img/instalation.jpg)
 
-2. Configuración del parche: `ahnr_config.txt`
-    - **replace_from**: idioma base al que se modificarán los archivos. Es el mismo que se selecciona para el juego. Ej: Si juegas en Español entonces será `spanish`.
-    - **replace_to**: idioma al que se convertirán los nombres de los héroes. Ej: `english`.
-    - **sets**: sets id separadas por comas (,). Ej: `00,01`. Recuerda **añadir más sets** cuando se añadan al juego, por ejemplo `00,01,02`.
-    - **files**: rutas relativas a archivos de localización separadas por comas (,). Ej: `
+2. Patch configuration: `ahnr_config.txt`
+    - **replace_from**: base language to modify th files. It is teh same that is selected to the game. Ej: If you are playing in Spanish, then this is `spanish`.
+    - **replace_to**: language to will become hero names. Ex: `english`.
+    - **sets**: sets id separated by comas (,). Ex: `00,01`. Remember **add more sets** when these are added to the game, for example `00,01,02`.
+    - **files**: relative paths to lacalization files separated by comas (,). Ex: `
         game/dcg/resource/dcg_common_<LANG>.txt,
         game/dcg/panorama/localization/dcg_<LANG>.txt,
         game/dcg/panorama/localization/dcg_glossary_<LANG>.txt
     `
-    - **files_sets**: rutas relativas de archivos de localización relacionadas con los sets separadas por comas (,). Ej: `game/dcg/resource/card_set_<SETID>_<LANG>.txt,game/dcg/panorama/localization/dcg_lore_set_<SETID>_<LANG>.txt,game/dcg/panorama/localization/dcg_vo_set_<SETID>_<LANG>.txt`
+    - **files_sets**: relative paths to lacalization files sets related separated by comas (,). Ex: `game/dcg/resource/card_set_<SETID>_<LANG>.txt,game/dcg/panorama/localization/dcg_lore_set_<SETID>_<LANG>.txt,game/dcg/panorama/localization/dcg_vo_set_<SETID>_<LANG>.txt`
 
     ***Nota:***
-    - `<SETID>` es la id del set. Ejemplo: 00, 01... Se sustituye en el programa automáticamente según los `sets` establecidos en el archivo de configuración `ahnr_config.txt`. Para saber hasta que id de los sets hay, mira en los directorios mencionados arriba y mira con atención su numeración en los nombres de los archivos.
-    - `<LANG>` idioma base al que modificar los archivos. Esto es `replace_from` del `ahnr_config.txt`.
+    - `<SETID>` set id. Example: 00, 01... They are automatically replaced according to `sets` established at config file `ahnr_config.txt`. To know until that set id there are, see folder mentioned above and see with attention their numeration at file names.
+    - `<LANG>` base language to modify the files. This is `replace_from` from `ahnr_config.txt`.
 
-    Estos placeholders se cambiarán automáticamente por sus correspondientes. No borres o sustituyas `<SETID>` y `<LANG>` si no sabes lo que estás haciendo.
+    These placeholders are modify automatically by their related. Don't delete or replace `<SETID>` and `<LANG>` if you don't know what are you doing.
 
-    - Idiomas disponibles:
+    - Avaliables languages:
         - `brazilian`
         - `english`
         - `french`
@@ -62,36 +66,36 @@ Donaciones: a través de [Ko-fi](https://www.ko-fi.com/desvelao) o [Patreon](htt
         - `spanish`
         - `tchinese`
 
-3. Inicia el ejecutable.
+3. Execute the program.
 
-## Resultados del parche
-Tras ejecutar el programa, se mostrarán los resultados de la aplicación del parche a los distintos archivos a reemplazar:
+## Patch results
+After program execution, it will show the results of path application to different files to replace:
 
-- ❌ **It is patched:** el archivo ya fue parcheado alguna vez anterior a esta ejecución. Los archivos parcheados, contienen al final de su contenido `//PATCHED` y sirve para saber que ese archivo ya fue modificado.
-- ❌ **Without changes:** no se encontró ningún reemplazo en este archivo. Ocurrirá en los archivos de localización que no contengan nombres de héroes, aún así, se comprobarán.
-- ✅ **FILE PATCHED:** se ha parcheado este archivo y se le añadió `//PATCHED` al final de éste para reconocerlo en posteriores ejecuciones del programa y evitar reparchear y poder romper el reemplazo.
+- ❌ **It is patched:** file was patched before this execution. Pathced files contain at end of its content `//PATCHED` and it is useful to know what taht file was modified.
+- ❌ **Without changes:** doesn't find valid replacementfor that file. It will occur in localization files that doesn't contain hero names.
+- ✅ **FILE PATCHED:** file was succesfully pathced and added `//PATCHED` to end of this to recognise at after executations.
 
-# Actualización del juego
-Las actualizaciones del juego pueden modificar los archivos de localización en los que se realizaron reemplazos, por lo que se perdería la traducción realizada. Puedes saberlo si tras una actualización del juego, la fecha de modificación de los archivos que parcheaste previamente ha cambiado o ver si el texto de los archivos que se modificaron tienen al final `//PATCHED`.
+# Game updates
+Game updates can modify localization files where it did replacements, so traduction would lose. You can know if after a game update, modification date of files that you patched previously has changed or see if the text of modified files contain at end `//PATCHED`.
 
-❗ **Tras una actualización del juego, recuerda reaplicar el parche para ver si hay algo nuevo que necesite modificarse.**
+❗ **After a game update, remember reapply the patch to see if some new need to be patched.**
 
-# Restauración
-Si necesitas o quieres restaurar los archivos originales tras aplicar el parche, puedes:
-- reestablecer la copia de seguridad que hiciste de los archivos
-- verificar la integridad de los archivos (los reestablece a los originales y actualizados)
-- reinstalar el juego (como última opción)
+# Restauration
+If you need or want to restaurate the originals files after apply the patch, you can:
+- restore the backup you did
+- verify files integrity
+- reinstall the game (as last option)
 
-❗ Cuidado con mantener **copias de seguridad muy antiguas**, pues al reestablecerlas, si fueron anteriores a alguna actualización que añadió más información a los archivos de localización y ésta no se encuentra, puede dar lugar a errores. Por ello, se recomienda verificar la integridad de los archivos si se quiere restaurarlos.
+❗ Care with keep **old backups**, so you restore, if these were before to a game update that added more information to localization files and this isn't find, can raise errors. For this reason, it is recommendedverify files integrity if you want to restore.
 
-## Verificar la integridad de los archivos
-Desde la biblioteca de Steam, clica con botón derecho del ratón sobre el juego (Artifact) y selecciona `Propiedades`. Luego ve a la pestaña de `Archivos Locales` y por último pulsa `Verificar la integridad de los archivos`. Esto comprabará si los archivos de tu juego son correctos y los que no, los descargará y reemplazará. El parcheo desaparecerá.
+## Verify files integrity
+From Steam Library, click with right mouse button at Artifact (game) and select `Properties`. Then go to `Local Files` tab and `Verify file integrity`. This will check if your game files are correct and if they aren't, this will download and replace. The patch will be disappear.
 
 
-# Vista previa
-Ej: reemplazo de `spanish` a `english`.
+# Preview
+Ej: replace from `spanish` to `english`.
 
-En el archivo de configuración (ahnr_config.txt):
+At config file (ahnr_config.txt):
 ```
 replace_from = spanish
 replace_to = english
@@ -100,6 +104,6 @@ replace_to = english
 
 ![game-patched](img/game-patched.png)
 
-# Errores en el programa
+# Progrma errors
 
-Si encuentras algún problema en el programa puedes repórtarlo en los [issues](https://github.com/Desvelao/ahnr/issues) de este mismo repositorio o ponte en contacto conmigo a través de otro medio (en Discord **Desvelao^^#2956**).
+If you find a problem with the program, you can report at [issues](https://github.com/Desvelao/ahnr/issues) of this same repository or contact me (on Discord **Desvelao^^#2956**).

@@ -46,7 +46,7 @@ Donations: [Ko-fi](https://www.ko-fi.com/desvelao) or [Patreon](https://www.patr
     `
     - **files_sets**: relative paths to lacalization files sets related separated by comas (,). Ex: `game/dcg/resource/card_set_<SETID>_<LANG>.txt,game/dcg/panorama/localization/dcg_lore_set_<SETID>_<LANG>.txt,game/dcg/panorama/localization/dcg_vo_set_<SETID>_<LANG>.txt`
 
-    ***Nota:***
+    ***Note:***
     - `<SETID>` set id. Example: 00, 01... They are automatically replaced according to `sets` established at config file `ahnr_config.txt`. To know until that set id there are, see folder mentioned above and see with attention their numeration at file names.
     - `<LANG>` base language to modify the files. This is `replace_from` from `ahnr_config.txt`.
 
@@ -104,6 +104,6 @@ replace_to = english
 
 ![game-patched](img/game-patched.png)
 
-# Progrma errors
+# Program errors
 
 If you find a problem with the program, you can report at [issues](https://github.com/Desvelao/ahnr/issues) of this same repository or contact me (on Discord **Desvelao^^#2956**).

@@ -1,4 +1,4 @@
-# Other languages guide:
+# Guide in other languages:
 - [Spanish](guides/spanish/README.md)
 
 # Artifact Hero Names Replacer (AHNR)
